@@ -14,23 +14,23 @@ const getid = () => {
         alert('Ingresa un valor');
     } else {
         console.log(id);
-        fetchData(id);
+        search(id);
     }
 };
-const fetchData = async (id) => {
+const search = async (id) => {
     try {
         console.log(id);
 
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        const data = await res.json();
+        let info = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        let data = await info.json();
 
         console.log(data);
-        console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`);
+        console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`);
 
         const pokemon = {
-            img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`,
+            img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`,
             imgJuego: data.sprites.front_default,
-            imgCvg: data.sprites.other.dream_world.front_default,
+            imgCvg: data.sprites.other.home.front_default,
             id_pokemon: data.id,
             nombre: data.name,
             experiencia: data.base_experience,
@@ -59,4 +59,4 @@ const mostrar = (pokemon) => {
     document.getElementById("buscador").className += ' bg-danger';
 };
 
-fetchData(id);
+search(id);
