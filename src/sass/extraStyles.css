@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to left,rgb(1, 179, 155), rgb(0, 255, 55));
+    background: linear-gradient(to left, rgb(176, 179, 1), rgb(0, 255, 55));
     padding: 20px;
 }
 
@@ -21,9 +21,13 @@ input{
 }
 
 #card{
-    height:430px;
+    height:auto;
+}
+
+#stats h5{
+    margin-bottom:60px;
 }
 
 #spinner{
-    margin-top: 180px;
+    margin: 40px auto;
 }

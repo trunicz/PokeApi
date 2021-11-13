@@ -33,12 +33,9 @@ const search = async (id) => {
 
         
         console.log(data);
-        console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`);
 
         const pokemon = {
-            img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`,
-            imgJuego: data.sprites.front_default,
-            imgCvg: data.sprites.other.home.front_default,
+            img: data.sprites.other.home.front_default,
             id_pokemon: data.id,
             nombre: data.name,
             experiencia: data.base_experience,
@@ -68,7 +65,7 @@ const clear = () => {
 }
 
 const mostrar = (pokemon) => {
-    document.querySelector("#img-pokemon").setAttribute("src", pokemon.imgCvg);
+    document.querySelector("#img-pokemon").setAttribute("src", pokemon.img);
     document.querySelector("#card-title").innerHTML = `${pokemon.nombre}`;
 
     document.getElementById("card-id").innerHTML = `${pokemon.id_pokemon} <span class="badge bg-secondary">id</span>`;
