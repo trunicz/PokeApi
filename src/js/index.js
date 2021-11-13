@@ -28,8 +28,6 @@ const search = async (id) => {
     document.querySelector("#spinner").className = "spinner-border align-self-center fs-4";
 
     try {
-        console.log(id);
-
         let info = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         let data = await info.json();
 
@@ -53,7 +51,7 @@ const search = async (id) => {
         setTimeout(() => {
             document.querySelector("#content-card").className = "d-flex flex-column align-items-center";
             document.querySelector("#spinner").className = "visually-hidden";
-          }, 500);
+        }, 500);
 
     } catch (e) {
         console.log(e);
