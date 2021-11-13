@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/extrastyles.css">
+    <link rel="stylesheet" href="sass/extraStyles.css">
+</head>
+
+<body class="">
+
+    <div id="buscador"
+        class="d-flex justify-content-between align-items-center px-3 rounded-3 m-auto col-sm-4 col-md-4 bg-white bg-opacity-50 ">
+        <input placeholder="Search" class="col-md-10 col-9 bg-transparent h-75  border-0" type="text" name="pokemon"
+            id="pokemon">
+        <button onclick="getid()" class="btn btn-primary h-75 d-flex justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg></i>
+        </button>
+    </div>
+
+    <div id="card" class="card p-sm-1 col-sm-6 col-md-5 col-lg-4 mt-5 mx-auto bg-white bg-opacity-50 p-4 rounded-3">
+        <img id="img-pokemon" class="pe-none mx-auto w-50"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            alt="card-img">
+        <div class="card-body m-0">
+            <hr>
+            <div class="d-flex justify-content-between align-center">
+                <h5 class="card-title float-start text-uppercase" id="card-title">bulbasaur</h5>
+                <h4 id="card-id">#01</h4>
+            </div>
+            <div class="clearfix"></div>
+            <hr>
+            <div class="d-flex justify-content-between text-uppercase">
+                <h5 class="card-text" id="hp">0<span class="badge bg-primary">hp</span></h5>
+                <h5 class="card-text" id="exp">0<span class="badge bg-primary">exp</span></h5>
+                <h5 class="card-text" id="atq">0<span class="badge bg-primary">atq</span></h5>
+                <h5 class="card-text" id="def">0<span class="badge bg-primary">def</span></h5>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

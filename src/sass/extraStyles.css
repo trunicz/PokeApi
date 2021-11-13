@@ -1,0 +1,21 @@
+body{
+    background: linear-gradient(to left,rgb(179, 1, 54), rgb(255, 153, 0));
+    padding: 20px;
+}
+
+input{
+    outline: none;
+    cursor: pointer;
+}
+
+#buscador{
+    height:40px;
+}
+
+::placeholder{
+    color: #333;
+}
+
+#alert-danger{
+    height:40px;
+}
