@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to left,rgb(179, 1, 54), rgb(255, 153, 0));
+    background: linear-gradient(to left,rgb(1, 179, 155), rgb(0, 255, 55));
     padding: 20px;
 }
 
@@ -18,4 +18,12 @@ input{
 
 #alert-danger{
     height:40px;
+}
+
+#card{
+    height:430px;
+}
+
+#spinner{
+    margin-top: 180px;
 }
