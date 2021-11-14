@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to left, rgb(176, 179, 1), rgb(0, 255, 55));
+    background: linear-gradient(to left, rgb(255, 57, 57), rgb(149, 35, 255));
     padding: 20px;
 }
 
@@ -10,6 +10,7 @@ input{
 
 #buscador{
     height:40px;
+    max-width: 75%;
 }
 
 ::placeholder{
@@ -22,12 +23,70 @@ input{
 
 #card{
     height:auto;
+    width: 75% !important;
+    max-width: 75%;
 }
 
 #stats h5{
     margin-bottom:60px;
+    font-size: 25px;
 }
 
 #spinner{
     margin: 40px auto;
+}
+
+#next,#back{
+    width: 30px !important;
+    height: 10%;
+}
+
+@media (max-width: 568px){
+    h5{
+        font-size: 16px !important;
+    }
+    h4{
+        font-size: 16px !important;
+    }
+    #btn-closes{
+        display: none !important;
+    }
+    #stats{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items:center;
+    }
+    #stats h5{
+        margin: 0;
+    }
+    #name-poke{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    #img-pokemon{
+        width: 100% !important;
+        float: left;
+    }
+    #content-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* @media (max-width: 1024px) {
+    h5{
+        font-size: 12px !important;
+    }
+    h4{
+        font-size: 12px !important;
+    }
+    #btn-closes{
+        display: none !important;
+    }
+} */
+
+#btn-closes{
+    display: block;
 }
